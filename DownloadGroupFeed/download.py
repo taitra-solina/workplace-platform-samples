@@ -56,7 +56,7 @@ def getFeed(group, name):
         return []
 
     # Did we get back data?
-    if "data" in result_json:
+    if len(result_json['data']) != 0:
         for feed_item in result_json["data"]:
 
             # Convenience: Add empty field for message / link if not existent
